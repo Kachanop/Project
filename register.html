@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครสมาชิก - Health Queue</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>สมัครสมาชิก</h2>
+            <p>สร้างบัญชีใหม่เพื่อเริ่มใช้งาน</p>
+            <form id="register-form">
+                <div class="input-group">
+                    <label for="name">ชื่อ-นามสกุล</label>
+                    <input type="text" id="name" class="input" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">อีเมล</label>
+                    <input type="email" id="email" class="input" required>
+                </div>
+                <div class="input-group">
+                    <label for="idCard">เลขบัตรประชาชน</label>
+                    <input type="text" id="idCard" class="input" required pattern="\d{13}" title="กรุณากรอกเลขบัตรประชาชน 13 หลัก">
+                </div>
+                <div class="input-group">
+                    <label for="password">รหัสผ่าน</label>
+                    <input type="password" id="password" class="input" required minlength="6">
+                </div>
+                <button type="submit" class="btn">สมัครสมาชิก</button>
+            </form>
+            <p class="text-center">มีบัญชีอยู่แล้ว? <a href="index.html">เข้าสู่ระบบที่นี่</a></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

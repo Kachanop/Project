@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แผงควบคุมแอดมิน - Health Queue</title>
+    <link rel="stylesheet" href="app.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+        .badge { background-color: var(--danger-color); color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin-left: 8px; }
+        /* สไตล์สำหรับแสดงใบนัด Preview */
+        .slip-preview { border: 1px solid #ccc; padding: 1em; margin-top: 1em; background-color: #f9f9f9; border-radius: 5px; white-space: pre-wrap; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>แผงควบคุมแอดมิน</h1>
+            <nav id="admin-nav">
+                <button class="btn active" data-page="new-requests">
+                    นัดใหม่ <span class="badge" id="new-count"></span>
+                </button>
+                <button class="btn btn-secondary" data-page="approved-requests">
+                    รอแจ้งผลคนไข้ <span class="badge" id="approved-count"></span>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <div id="new-requests" class="page active">
+                <h2>รายการนัดหมายใหม่</h2>
+                <div id="new-requests-list"></div>
+            </div>
+
+            <div id="approved-requests" class="page">
+                <h2>รายการที่รอแจ้งผลคนไข้</h2>
+                <div id="approved-requests-list"></div>
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

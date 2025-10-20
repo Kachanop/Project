@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>นัดหมายของฉัน - Health Queue</title>
+    <link rel="stylesheet" href="app.css">
+    <style>
+        /* สไตล์สำหรับใบนัด */
+        .appointment-card {
+            border-left-width: 5px;
+            border-left-style: solid;
+            margin-bottom: 1.5rem;
+        }
+        .status-confirmed { border-left-color: var(--success-color); }
+        .status-rejected { border-left-color: var(--danger-color); }
+        .status-pending { border-left-color: var(--secondary-color); }
+        .appointment-card h3 { margin-top: 0; }
+        .appointment-card p { margin-bottom: 0.5rem; line-height: 1.7; }
+        .rejection-reason {
+             background-color: #fff5f5;
+             border: 1px solid var(--danger-color);
+             padding: 1rem;
+             margin-top: 1rem;
+             border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="home.html">&larr; กลับไปหน้าหลัก</a>
+            <nav>
+                <button id="logout-btn" class="btn btn-danger">ออกจากระบบ</button>
+            </nav>
+        </header>
+        <main>
+            <h2>รายการนัดหมายของฉัน</h2>
+            <div id="appointments-list">
+                </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

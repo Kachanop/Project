@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จองนัดหมาย - Health Queue</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a id="back-to-clinic" href="clinic.html">&larr; กลับไปหน้ารายชื่อแพทย์</a>
+            <nav>
+                <a href="myappointments.html" class="btn btn-secondary">ดูนัดหมาย</a>
+                <button id="logout-btn" class="btn btn-danger">ออกจากระบบ</button>
+            </nav>
+        </header>
+        <main>
+            <h2>ทำการนัดหมาย</h2>
+            <div class="grid cols-2">
+                <div id="doctor-info" class="card"></div>
+                <div class="card">
+                    <h3>กรอกรายละเอียดการนัดหมาย</h3>
+                    <form id="booking-form">
+                        <div id="booking-options"></div>
+                        <div class="input-group">
+                            <label for="appointment-date">เลือกวันที่</label>
+                            <input type="date" id="appointment-date" class="input" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="appointment-time">เลือกเวลา</label>
+                            <input type="time" id="appointment-time" class="input" required>
+                        </div>
+                        <button type="submit" class="btn">ยืนยันการจอง</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
